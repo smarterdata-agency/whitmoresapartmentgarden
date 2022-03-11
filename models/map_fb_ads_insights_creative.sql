@@ -22,7 +22,7 @@ action,
 actions
 
 FROM
-`smarter-data-agency-pipelin.{{target}}.map_ads_insights_platform_proc`
+`{{target.project}}.map_ads_insights_platform_proc`
 LEFT  JOIN
-`smarter-data-agency-pipelin.{{target}}.map_facebook_creative_proc`
+`{{target.project}}.map_facebook_creative_proc`
 ON ad_id=id
