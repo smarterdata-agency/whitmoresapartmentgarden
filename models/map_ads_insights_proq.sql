@@ -21,6 +21,6 @@ value.action_type as action,
 value._7d_click as actions 
 
 
- FROM `stitch007.fb_wag.ads,
+ FROM `stitch007.fb_wag.ads_insights`,
  unnest(actions) as action
 
