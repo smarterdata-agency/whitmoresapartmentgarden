@@ -1,5 +1,5 @@
 name: 'my_apartment_garden'
-version: '2'
+version: '1.0.0'
 config-version: 2
 
 # This setting configures which "profile" dbt uses for this project.
