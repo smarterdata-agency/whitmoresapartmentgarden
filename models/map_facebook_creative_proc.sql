@@ -2,6 +2,9 @@ SELECT
 
 id,
 body,
-image_url
+image_url,
+object_id,
+object_story_id,
+object_story_spec
 
  FROM `stitch007.fb_wag.adcreative` 
