@@ -24,5 +24,8 @@ actions
 FROM
 {{ ref('map_ads_insights_platform_proc') }}
 LEFT  JOIN
+{{ ref('map_ads_id_creative_id_proc') }}
+ON ad_id=ads_table_id
+LEFT JOIN
 {{ ref('map_facebook_creative_proc') }}
-ON ad_id=id
+ON ads_table_id=creative_id

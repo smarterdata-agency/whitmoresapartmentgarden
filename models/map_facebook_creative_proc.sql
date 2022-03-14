@@ -1,6 +1,6 @@
 SELECT 
 
-id,
+id as creative_id,
 body,
 image_url,
 object_story_id,
