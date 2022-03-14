@@ -15,9 +15,11 @@ cpm,
 reach,
 impressions,
 engagement_rate_ranking,
+value.action_type as action,
+value._7d_click as actions 
 
 
 
- FROM `stitch007.fb_wag.ads_insights`,
+ FROM `stitch007.fb_wag.ads_insights`, unnest(actions) as action
 
 
