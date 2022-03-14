@@ -1,33 +1,18 @@
-
-with ads_insights_platform_conversions as (
-
-SELECT  
-
-date_start as date,
-campaign_id,
-campaign_name,
-adset_id,
-ad_id,
-value.action_type as action,
-value._7d_click as action_values
- FROM `stitch007.fb_wag.ads_insights_platform_and_device`,
-UNNEST(actions) as actions
-
-
-)
+SELECT * FROM (
 
 SELECT 
 date,
 campaign_id,
-campaign_name,
 adset_id,
 ad_id,
 action,
 sum(action_values) as action_values
+ FROM {{ ref(`smarter-data-agency-pipeline.development.map_ads_insights_conversions_proc`) }}
+GROUP BY date, campaign_id, adset_id, ad_id, action
+)
+PIVOT
+(
+SUM(action_values) as action_values
+FOR action IN ('post_reaction','page_engagement','post_engagement')
 
-
-from ads_insights_platform_conversions
-group by date,campaign_id, adset_id, ad_id, action, campaign_name
-order by date desc
-
-
+)
