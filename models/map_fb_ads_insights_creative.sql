@@ -8,6 +8,7 @@ ad_name,
 campaign_id,
 adset_id,
 ad_id,
+ads_table_id
 body,
 image_url,
 spend,
