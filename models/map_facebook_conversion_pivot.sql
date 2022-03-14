@@ -7,7 +7,7 @@ adset_id,
 ad_id,
 action,
 sum(action_values) as action_values
- FROM {{ ref(`smarter-data-agency-pipeline.development.map_ads_insights_conversions_proc`) }}
+FROM {{ ref('smarter-data-agency-pipeline.development.map_ads_insights_conversions_proc') }}
 GROUP BY date, campaign_id, adset_id, ad_id, action
 )
 PIVOT
