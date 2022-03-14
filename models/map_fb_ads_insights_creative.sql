@@ -29,4 +29,4 @@ LEFT  JOIN
 ON ad_id=ads_table_id
 LEFT JOIN
 {{ ref('map_facebook_creative_proc') }}
-ON ads_table_id=creative_id
+ON ads_table_id=ads_table_creative_id
