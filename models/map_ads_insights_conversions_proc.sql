@@ -7,6 +7,9 @@ date_start as date,
 campaign_id,
 adset_id,
 ad_id,
+campaign_name,
+adset_name,
+ad_name
 
 value.action_type as action,
 value._7d_click as action_values
@@ -21,6 +24,9 @@ date,
 campaign_id,
 adset_id,
 ad_id,
+campaign_name,
+adset_name,
+ad_name,
 action,
 sum(action_values) as action_values
 
