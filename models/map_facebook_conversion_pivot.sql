@@ -19,7 +19,7 @@ UNNEST(actions) as actions
 SELECT 
 date,
 campaign_id,
-campaign_name
+campaign_name,
 adset_id,
 ad_id,
 action,
