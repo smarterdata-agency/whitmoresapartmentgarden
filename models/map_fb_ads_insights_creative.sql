@@ -1,7 +1,7 @@
 SELECT  
 
 date,
-objective,
+
 campaign_name,
 adset_name,
 ad_name,
