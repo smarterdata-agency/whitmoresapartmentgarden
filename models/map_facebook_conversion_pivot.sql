@@ -27,7 +27,7 @@ sum(action_values) as action_values
 
 
 from ads_insights_platform_conversions
-group by date,campaign_id, adset_id, ad_id, action
+group by date,campaign_id, adset_id, ad_id, action, campaign_name
 order by date desc
 
 
