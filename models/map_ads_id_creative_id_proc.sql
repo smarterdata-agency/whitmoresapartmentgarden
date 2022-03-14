@@ -1,4 +1,4 @@
-SELECT 
+SELECT distinct
 id as ads_table_id , 
 creative.id as ads_table_creative_id FROM 
 
